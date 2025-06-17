@@ -1,36 +1,94 @@
-# 🧠 ATS Resume Analyzer
+# 🧠 ATS Resume Analyzer – AI-Powered Resume & JD Matching Tool
 
-An AI-powered Resume Analyzer built with **Python (Flask)** and **React**, designed to match resumes against job descriptions using NLP, LLMs, and semantic similarity scoring.
-
----
-
-## 🚀 Features
-
-- 📄 Upload Resume (PDF/DOCX)
-- 📋 Input Job Description
-- 🤖 Gemini LLM and Transformer-based Matching
-- ✅ Single / Multiple Resume Scoring
-- 📊 View Match Percentage and Missing Keywords
-- ⚡ Built with Flask (Backend) and React + Tailwind (Frontend)
+📖 **About the Project**  
+**ATS Resume Analyzer** is a smart and intuitive AI-driven tool that analyzes resumes and matches them against job descriptions using powerful NLP models, LLMs (Gemini), and transformer-based sentence embeddings. Built using Python (Flask) and React (Vite + Tailwind CSS), it helps recruiters and job seekers evaluate how well a resume aligns with a specific role by generating match scores and identifying missing keywords.
 
 ---
 
-## 🛠️ Tech Stack
-
-- **Frontend**: React, Tailwind CSS, Vite
-- **Backend**: Python, Flask
-- **NLP**: Sentence Transformers, Gemini API
-- **Deployment**: GitHub + Render (optional)
+🎯 **Objectives**  
+✅ Match Resumes to Job Descriptions using AI  
+✅ Extract and highlight missing keywords  
+✅ Support Single and Multiple Resume Uploads  
+✅ Generate Scores using Gemini LLM and Transformer Models  
+✅ Provide an interactive, fast, and modern web interface  
 
 ---
 
-## 📂 Project Structure
+🛠️ **Tech Stack**
 
-```plaintext
+| Category        | Technologies Used                                 |
+|----------------|----------------------------------------------------|
+| Frontend       | React.js, Vite, Tailwind CSS, JavaScript           |
+| Backend        | Python, Flask                                      |
+| NLP/ML         | Sentence Transformers, Gemini LLM, scikit-learn    |
+| Deployment     | GitHub, Render (optional)                          |
+
+---
+
+🚀 **Features**  
+✔️ Upload PDF or DOCX Resumes  
+✔️ Input Job Descriptions (Rich Text)  
+✔️ View Gemini & Transformer-Based Scores  
+✔️ Highlight Missing Keywords  
+✔️ Supports Both Single and Multiple Resume Analysis  
+✔️ Responsive UI with Real-time Scoring Feedback  
+
+---
+
+📌 **Installation & Setup**
+
+**Prerequisites**  
+- Python 3.x  
+- Node.js & npm  
+- Git  
+- Virtual Environment (`venv`)  
+
+**1️⃣ Clone the Repository**  
+```bash
+git clone https://github.com/arooshv9/ats-score.git  
+cd ats-score
+cd backend
+2️⃣ Backend Setup (Flask API)
+python -m venv venv  
+venv\Scripts\activate        # On Windows  
+# source venv/bin/activate  # On Mac/Linux  
+pip install -r requirements.txt  
+python app.py
+3️⃣ Frontend Setup (React Client)
+cd ../ats-analyzer/client  
+npm install  
+npm run dev
+4️⃣ Open the App
+Visit http://localhost:3000 in your browser.
+
+📂 Project Structure
 ats-score/
 ├── ats-analyzer/
-│   └── client/                # React Frontend
+│   └── client/                 # React Frontend
 ├── backend/                   # Flask API
-├── finetuned_resume_model/   # Custom Transformer Model
-├── README.md
-└── .gitignore
+│   ├── app.py                 # Main backend server
+│   ├── resume_parser.py       # Resume parsing logic
+│   └── utils/                 # Helper functions
+├── finetuned_resume_model/   # Sentence Transformer Model
+├── .gitignore
+└── README.md
+
+🧠 How It Works
+
+Upload a resume (or multiple) and provide a job description.
+
+Flask backend parses the resume, extracts content using pdfplumber or docx.
+
+Gemini API and Sentence Transformer model compare resume and JD to generate a semantic match score.
+
+Missing keywords are extracted and shown.
+
+Final scores are displayed along with actionable feedback.
+
+🤝 Contributing
+We welcome community contributions! Feel free to fork the repo, open issues, or submit pull requests for bug fixes, features, or documentation updates.
+
+📧 Contact
+Built by Aroosh Reddy
+For queries, suggestions, or collaborations, feel free to reach out via GitHub!
+
