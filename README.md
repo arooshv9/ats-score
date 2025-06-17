@@ -48,20 +48,28 @@
 git clone https://github.com/arooshv9/ats-score.git  
 cd ats-score
 cd backend
-2️⃣ Backend Setup (Flask API)
+```
+**2️⃣ Backend Setup (Flask API)**
+```bash
 python -m venv venv  
 venv\Scripts\activate        # On Windows  
 # source venv/bin/activate  # On Mac/Linux  
 pip install -r requirements.txt  
 python app.py
-3️⃣ Frontend Setup (React Client)
+```
+**3️⃣ Frontend Setup (React Client)**
+```bash
 cd ../ats-analyzer/client  
 npm install  
 npm run dev
-4️⃣ Open the App
+```
+**4️⃣ Open the App**
+```bash
 Visit http://localhost:3000 in your browser.
+```
 
 📂 Project Structure
+```bash
 ats-score/
 ├── ats-analyzer/
 │   └── client/                 # React Frontend
@@ -72,7 +80,7 @@ ats-score/
 ├── finetuned_resume_model/   # Sentence Transformer Model
 ├── .gitignore
 └── README.md
-
+```
 🧠 How It Works
 
 Upload a resume (or multiple) and provide a job description.
