@@ -66,7 +66,6 @@ print(f"Training examples created: {len(examples)}")
 
 # ========== TRAIN MODEL ==========
 model = SentenceTransformer("all-MiniLM-L6-v2")
-
 train_dataloader = DataLoader(examples, shuffle=True, batch_size=16)
 train_loss = losses.CosineSimilarityLoss(model)
 
